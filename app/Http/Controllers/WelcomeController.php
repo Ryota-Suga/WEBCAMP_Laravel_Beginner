@@ -25,4 +25,14 @@ class WelcomeController extends Controller
      {
          return View('welcome_second');
      }
+     
+     /**
+     * 3rdページを表示する
+     * 
+     * @return \Illuminate\View\View
+     */
+     public function third()
+     {
+         return View('welcome_third');
+     }
 }
