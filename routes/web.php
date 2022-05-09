@@ -18,6 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 */
-Route::get('/',[WelcomeController::class,'index']);
+Route::get('/welcome',[WelcomeController::class,'index']);
 Route::get('/welcome/second',[WelcomeController::class,'second']);
 Route::get('/welcome/third',[WelcomeController::class,'third']);
