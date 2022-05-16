@@ -30,37 +30,18 @@
         <a href="./top.html">CSVダウンロード(未実装)</a><br>
         <table border="1">
             <tr>
-                <th>タスク名
-                <th>期限
-                <th>重要度
+            <th>タスク名
+            <th>期限
+            <th>重要度
+            @foreach($list as $task)
             <tr>
-                <td>HTML formの学習
-                <td>2022/01/01
-                <td>普通
+                <td>{{$task->name}}
+                <td>{{$task->period}}
+                <td>{{$task->getPriorityString()}}
                 <td><a href="./detail.html">詳細閲覧</a>
                 <td><a href="./edit.html">編集</a>
                 <td><form action="./top.html"><button>完了</button></form>
-            <tr>
-                <td>PHPの学習
-                <td>2022/01/15
-                <td>普通
-                <td><a href="./detail.html">詳細閲覧</a>
-                <td><a href="./edit.html">編集</a>
-                <td><form action="./top.html"><button>完了</button></form>
-            <tr>
-                <td>RDBの学習
-                <td>2022/02/01
-                <td>普通
-                <td><a href="./detail.html">詳細閲覧</a>
-                <td><a href="./edit.html">編集</a>
-                <td><form action="./top.html"><button>完了</button></form>
-            <tr>
-                <td>Laravelの学習
-                <td>2022/02/15
-                <td>普通
-                <td><a href="./detail.html">詳細閲覧</a>
-                <td><a href="./edit.html">編集</a>
-                <td><form action="./top.html"><button>完了</button></form>
+            @endforeach
         </table>
         <!-- ページネーション -->
         現在１ページ目<br>
